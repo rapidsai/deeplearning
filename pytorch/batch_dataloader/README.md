@@ -1,5 +1,5 @@
 ### Pytorch Batch Dataloader
-## 🚀 Feature (Submitted to Pytorch as a PR)
+## 🚀 Feature (Submitted to PyTorch as a PR)
 A dataloader and dataset that operate at the batch level, rather than the item level, pulling batches from contiguous blocks of memory and avoiding random access patterns in the dataloader.
 
 ## Motivation
