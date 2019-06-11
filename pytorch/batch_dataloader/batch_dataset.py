@@ -29,8 +29,8 @@ class TensorBatchDataset(BatchDataset):
     Arguments:
         *tensors (Tensor): tensors that have the same size of the first dimension.
         batch_size: The size of the batch to return
-        
-        
+        pin_memory (bool, optional): If ``True``, the dataset will be pinned memory for faster copy to GPU.  
+        I saw no performance improvement to doing so but results may vary.        
     """
     def __init__(self, tensors, batch_size=1, pin_memory=False):
         assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
