@@ -13,7 +13,7 @@ We have provided you with the same routines using both rapids cuDF and pandas. Y
 
 Within either secondary folder (rapids or pandas) you will find four available feature engineering workflows.
 
-You must run the create_data_pair_comparison_<type>.ipynb
+You must run the create_data_pair_comparison_<type>.ipynb (first)
 
 Currently the rapids version requires cuDF version 0.7 because of a masking bug (https://github.com/rapidsai/cudf/issues/2141). 
 
