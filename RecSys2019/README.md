@@ -23,7 +23,7 @@ The Training folder (currently in development) will contains the end to end work
 
 ## Future work
 
-The extension of this technique to datasets that don't fit entirely on GPU memory has been developed.  That method relies on a feature preprocessing stage that separates the data into sets of columns that will fit onto the GPU.  We are also working on a larger than *CPU* memory version of the dataloader to handle cases of extreme datasets beyond the scope of the RecSys Competition.  When datasets scale beyond CPU memory the dataloading times are severely impacted and we're developing a solution that pre shuffles the data into randomized parquet files which are then further randomized upon load.  Stay tuned for more on this.
+As mentioned the extension of this technique to datasets that don't fit entirely on GPU memory has been developed but is blocked by the [cuDF dlpack memory leak bug](https://github.com/rapidsai/cudf/issues/2400).  That method relies on a feature preprocessing stage that separates the data into sets of columns that will fit onto the GPU.  We are also working on a larger than *CPU* memory version of the dataloader to handle cases of extreme datasets beyond the scope of the RecSys Competition.  When datasets scale beyond CPU memory the dataloading times are severely impacted and we're developing a solution that pre shuffles the data into randomized parquet files which are then further randomized upon load.  Stay tuned for more on this.
 
 ## Experiments
 
