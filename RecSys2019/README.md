@@ -9,7 +9,7 @@ This repository contains demonstrations of the acceleration techniques used to a
 **Note that in it's current state feature engineering relies on cuDF 0.7 because of a [masking bug](https://github.com/rapidsai/cudf/issues/2141) while training requires 0.8.  This is resolved in the nightly build of cuDF and in 0.9+**
 
 ## Feature Creation
-To give a point of comparison we've provided feature creation using both [rapids cuDF]((https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/pandas)) and [pandas](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/pandas) which will hopefully help you translate your own feature engineering steps into cuDF.  
+To give a point of comparison we've provided feature creation using both [rapids cuDF](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/rapids) and [pandas](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/pandas) which will hopefully help you translate your own feature engineering steps into cuDF.  
 
 [create_data_pair_comparison_rapids.ipynb](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/FeatureEngineering/rapids/create_data_pair_comparison-rapids.ipynb) (or [it's pandas equivalent](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/FeatureEngineering/pandas/create_data_pair_comparison-panda.ipynb)) is the starting point for feature engineering and must be run before all other scripts.
 
