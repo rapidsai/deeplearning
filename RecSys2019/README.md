@@ -1,5 +1,5 @@
 # Accelerating Recommender Systems by 15x with RAPIDS Source Code
-This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
+This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x during the RecSys 2019 Challenge where the team placed 15th/1534 teams.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
 
 ## Prerequisites:
  - Collect the data at the following location: https://recsys.trivago.cloud/challenge/dataset/ (you need to sign up to get access)
@@ -19,8 +19,12 @@ After you have successfully completed feature engineering. Verify the exported t
 
 ## Preprocessing and Training
 
-The Training folder (currently in development) will contains the end to end workflows for an unoptimized version, [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb), and a version where the tensor is copied to CPU.  Only the optimized GPU version is currently available.
+The Training folder (currently in development) will contains the end to end workflows for an unoptimized version and [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb).  Setting 'to_cpu = True' on cell 7 of the GPU notebook modifies it so that the tensor is copied to CPU and dataloading happens from there.  Note that in order to see the full optimization effects you need to use the nightly version of PyTorch.  Without the kernel enhancement the model is ~6.5x slower.
 
 ## Experiments
 
 The experiments subfolder contains 3 notebooks, representing the three available model types. Choose one and run all cells to see speeds of each model across a range of batch sizes. 
+
+## Future work
+
+We are working on a larger than CPU memory version of the dataloader to handle cases of extreme datasets beyond the scope of the RecSys Competition.  
