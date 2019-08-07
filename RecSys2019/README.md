@@ -19,7 +19,7 @@ After you have successfully completed feature engineering. Verify the exported t
 
 ## Preprocessing and Training
 
-The Training folder (currently in development) will contain the end to end workflows for an unoptimized version, a GPU in memory version, and a version where the tensor is copied to CPU.  To be updated soon.
+The Training folder (currently in development) will contains the end to end workflows for an unoptimized version, [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb), and a version where the tensor is copied to CPU.  Only the optimized GPU version is currently available.
 
 ## Experiments
 
