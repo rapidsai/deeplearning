@@ -19,7 +19,7 @@ After you have successfully completed feature engineering. Verify the exported t
 
 ## Preprocessing and Training
 
-The Training folder (currently in development) will contains the end to end workflows for an unoptimized version and [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb).  Setting 'to_cpu = True' on cell 7 of the GPU notebook modifies it so that the tensor is copied to CPU and dataloading happens from there.  Note that in order to see the full optimization effects you need to use the nightly version of PyTorch.  Without the kernel enhancement the model is ~6.5x slower.
+The Training folder (currently in development) will contain the end to end workflows for an unoptimized version and [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb).  Setting 'to_cpu = True' on cell 7 of the GPU notebook modifies it so that the tensor is copied to CPU and dataloading happens from there.  Note that in order to see the full optimization effects you need to use the nightly version of PyTorch.  Without the kernel enhancement the model is ~6.5x slower.
 
 ## Future work
 
