@@ -17,6 +17,8 @@ Other examples of feature engineering are available in the [rapids](https://gith
 
 After you have successfully completed feature engineering. Verify the exported train.parquet, valid.parquet and test.parquet  files exist in the rsc19/cache/ folder. Once verified, you can proceed to preprocessing and model training. 
 
+Note the version included does not require the LAMB optimizer; we were able to achieve similar performance with AdamW.  For deeper networks it likely will be a critical component.  The version of LAMB we used in our testing can be found [here](https://github.com/cybertronai/pytorch-lamb).
+
 ## Preprocessing and Training
 
 The Training folder (currently in development) will contain the end to end workflows for an unoptimized version and [a GPU in memory version](https://github.com/rapidsai/dataloaders/blob/master/RecSys2019/Training/optimized_training_workflow_gpu.ipynb).  Setting 'to_cpu = True' on cell 7 of the GPU notebook modifies it so that the tensor is copied to CPU and dataloading happens from there.  Note that in order to see the full optimization effects you need to use the nightly version of PyTorch.  Without the kernel enhancement the model is ~6.5x slower.
