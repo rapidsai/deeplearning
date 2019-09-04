@@ -1,0 +1,1 @@
+[PyTorch](https://pytorch.org/) is an open source machine learning framework designed to accelerate the path from research prototyping to production deployment.  RAPIDS is an active contributor to PyTorch, developing preprocessing functionality and dataloading on the GPU, along with improvements to kernels and optimizers critical to deep learning on tabular data.
