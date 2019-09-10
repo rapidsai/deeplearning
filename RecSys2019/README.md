@@ -1,5 +1,5 @@
 ## Accelerating Recommender Systems by 15x with RAPIDS (Source Code)
-This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x during the RecSys 2019 Challenge where the team placed 15th/1534 teams.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
+This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x during the RecSys 2019 Challenge where the team placed 15th/1534 teams.  The [paper which goes into detail regarding our solution](https://github.com/rapidsai/deeplearning/blob/master/RecSys2019/RAPIDS%20RecSys%20Challenge%202019.pdf) is also available.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
 
 ## Prerequisites:
  - Collect the data at the following location: https://recsys.trivago.cloud/challenge/dataset/ (you need to sign up to get access)
