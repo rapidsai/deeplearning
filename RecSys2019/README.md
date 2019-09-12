@@ -3,10 +3,8 @@ This repository contains demonstrations of the acceleration techniques used to a
 
 ## Prerequisites:
  - Collect the data at the following location: https://recsys.trivago.cloud/challenge/dataset/ (you need to sign up to get access)
- - [install the nightly version of RAPIDS(0.9a+)](https://rapids.ai/start.html)** (or use the nightly RAPIDS container), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
+ - [install the nightly version of RAPIDS(0.10a+)](https://rapids.ai/start.html)** (or use the nightly RAPIDS container), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
  - A GPU capable of fitting the entire dataset in GPU memory (32GB Tesla V100).  We are working on versions that remove that restriction.
-
-**Note that in it's current state feature engineering relies on cuDF 0.7 because of a [masking bug](https://github.com/rapidsai/cudf/issues/2141) while training requires 0.8.  This is resolved in the nightly build of cuDF and in 0.9+**
 
 ## Feature Creation
 To give a point of comparison we've provided feature creation using both [rapids cuDF](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/rapids) and [pandas](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/pandas) which will hopefully help you translate your own feature engineering steps into cuDF.  
