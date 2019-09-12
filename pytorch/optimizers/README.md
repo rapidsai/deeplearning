@@ -1,5 +1,2 @@
-### Fused kernel optimizers
-
-Requirements: Numba
-
+# pytorch-optimizers
 Numba accelerated PyTorch Optimizers
