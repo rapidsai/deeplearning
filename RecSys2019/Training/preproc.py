@@ -109,7 +109,7 @@ class PreprocessDF():
         self.label_name = label_name
         self.to_cpu = to_cpu 
 
-    def preproc_dataframe(self, gdf: cudf.dataframe, mode):
+    def preproc_dataframe(self, gdf: cudf.DataFrame, mode):
         start = time()
         self.gdf = gdf
         self.mode = mode
