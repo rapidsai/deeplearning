@@ -3,7 +3,7 @@ This repository contains demonstrations of the acceleration techniques used to a
 
 ## Prerequisites:
  - Collect the data at the following location: https://recsys.trivago.cloud/challenge/dataset/ (you need to sign up to get access)
- - [install the nightly version of RAPIDS(0.10a+)](https://rapids.ai/start.html)** (or use the nightly RAPIDS container), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
+ - [install either RAPIDS 0.9 or the nightly version RAPIDS(0.10a+)](https://rapids.ai/start.html)** (or use the RAPIDS containers), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
  - A GPU capable of fitting the entire dataset in GPU memory (32GB Tesla V100).  We are working on versions that remove that restriction.
 
 ## Feature Creation
