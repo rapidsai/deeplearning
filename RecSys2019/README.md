@@ -1,12 +1,10 @@
 ## Accelerating Recommender Systems by 15x with RAPIDS (Source Code)
-This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x during the RecSys 2019 Challenge where the team placed 15th/1534 teams.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
+This repository contains demonstrations of the acceleration techniques used to accelerate the training of the fastai tabular deep learning model by a factor of 15x and the feature engineering of the inputs to the model by 9.7x during the RecSys 2019 Challenge where the team placed 15th/1534 teams.  The [paper which goes into detail regarding our solution](https://github.com/rapidsai/deeplearning/blob/master/RecSys2019/RAPIDS%20RecSys%20Challenge%202019.pdf) is also available.  Please follow the instructions carefully as additional files are currently a part of the repository that will be used for future versions.
 
 ## Prerequisites:
  - Collect the data at the following location: https://recsys.trivago.cloud/challenge/dataset/ (you need to sign up to get access)
- - [install the nightly version of RAPIDS(0.9a+)](https://rapids.ai/start.html)** (or use the nightly RAPIDS container), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
+ - [install the nightly version of RAPIDS(0.10a+)](https://rapids.ai/start.html)** (or use the nightly RAPIDS container), [PyTorch nightly](https://pytorch.org/get-started/locally/) and [fastai v1](https://docs.fast.ai/install.html)
  - A GPU capable of fitting the entire dataset in GPU memory (32GB Tesla V100).  We are working on versions that remove that restriction.
-
-**Note that in it's current state feature engineering relies on cuDF 0.7 because of a [masking bug](https://github.com/rapidsai/cudf/issues/2141) while training requires 0.8.  This is resolved in the nightly build of cuDF and in 0.9+**
 
 ## Feature Creation
 To give a point of comparison we've provided feature creation using both [rapids cuDF](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/rapids) and [pandas](https://github.com/rapidsai/dataloaders/tree/master/RecSys2019/FeatureEngineering/pandas) which will hopefully help you translate your own feature engineering steps into cuDF.  
