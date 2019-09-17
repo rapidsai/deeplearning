@@ -1,0 +1,70 @@
+dataset: 
+    input_path: /rapids/notebooks/srabhi/champs-2019/input
+    output_path: /rapids/notebooks/srabhi/champs-2019/output/
+    script_path: /rapids/notebooks/srabhi/champs-2019/final_solution/mpnn_model/dataset.py
+    normalize: False
+    gaussrank: False
+    
+model: 
+    script_path: /rapids/notebooks/srabhi/champs-2019/final_solution/mpnn_model/model.py
+    num_type: 1
+    RNN : True
+    mpnn: 
+        T_steps: 4
+        
+        node_encoder: 
+            encoding: label
+            emb_sz: [[6,3], [3,3], [3, 3], [3,3], [5,3], [8, 4]]
+            n_cont: 1
+            node_dim: 7
+            layers: [128, 128]
+            activation: relu
+            dropout: 0.
+
+        edge_encoder: 
+            encoding: label
+            emb_sz: [[5,3]]
+            n_cont: 2
+            node_dim: 128
+            edge_dim: 3
+            layers: [128, 64]
+            activation: relu
+            dropout: 0.
+                
+        Set2Set: 
+            processing_step: 4
+            num_layer: 1
+            in_channel: 128
+            batch_size: 64
+ 
+    regression: 
+        num_output: 1
+        input_dim: 768
+        shared_layers: [1024, 512, 128]
+        activation: relu
+        dropout: 0. 
+        num_target: 1 
+        predict_type: False
+        
+    node_seq:
+        node_dim: 128
+        hidden_size: 256
+        num_layers: 1
+        dropout: 0.05
+        batch_first: True
+        bidirectional: True
+        rnn_model: 'LSTM'
+        attention: True
+             
+train: 
+    train_shape: 4658147
+    test_shape: 2505542
+    batch_size: 64
+    epochs: 1
+    max_lr: 0.001
+    loss_name: lmaeo2ceha 
+    callback_metric: LMAE
+    pretrain: False
+    predict_type: False
+    model_name: MPNN_RNN_SINGLE_TYPE_WO_GAUSSRANK_
+    device: cuda 
