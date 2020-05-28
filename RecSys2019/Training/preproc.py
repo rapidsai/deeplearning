@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import nvstrings, nvcategory
 import warnings
 import cudf
+import cupy as cp
 import pyarrow.parquet as pq
 import pdb
 import torch
@@ -16,10 +17,7 @@ import glob
 from fastai import *
 from fastai.basic_data import *
 from fastai.core import *
-from librmm_cffi import librmm
 
-
-from librmm_cffi import librmm
 from time import time
 from torch import tensor
 
@@ -82,7 +80,7 @@ class MyLabelEncoder(object):
         self._cats = nvcategory.from_strings(y.data)
 
         self._fitted = True
-        arr: librmm.device_array = librmm.device_array(
+        arr: cp.array = cp.array(
             y.data.size(), dtype=np.int32
         )
         self._cats.values(devptr=arr.device_ctypes_pointer.value)
