@@ -40,8 +40,8 @@ from fastai.callbacks import SaveModelCallback
 from numba import cuda
 import cudf
 import cudf as gd
+import cupy as cp
 import nvstrings
-from librmm_cffi import librmm
 import dask
 from dask.delayed import delayed
 from dask.distributed import as_completed, Client, wait
@@ -156,7 +156,7 @@ class AUROC(Callback):
 ### CUDF pre-processing
 
 def on_gpu(words, func, arg=None, dtype=np.int32):
-    res = librmm.device_array(words.size(), dtype=dtype)
+    res = cp.array(words.size(), dtype=dtype)
     if arg is None:
         cmd = 'words.%s(res.device_ctypes_pointer.value)' % (func)
     else:
