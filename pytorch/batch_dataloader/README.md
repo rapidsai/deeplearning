@@ -13,7 +13,7 @@ Using the proposed method results in better GPU utilization, and better throughp
 
 I've created source for a batch dataloader and batch dataset modelled after their vanilla counterparts and would love to see it integrated into the PyTorch repo.  Usage is similar, and I've tried to stick to the pytorch variable naming and formatting.
 
-Code can be found here: https://github.com/rapidsai/dataloaders/tree/master/pytorch/batch_dataloader
+Code can be found here: https://github.com/rapidsai/dataloaders/tree/main/pytorch/batch_dataloader
 
 It should hopefully be ready to go; I've tested it with both base pytorch and with ignite, but more eyes on it would definitely be beneficial, particularly in use cases beyond tabular like text or small images.  It should be applicable to anyone who isn't doing large images or a lot of image augmentation.  It's undergone an internal (NVidia) review of @ptrblck who was immensely helpful in refining it and @ngimel who reviewed the codebase and had helpful suggestions regarding memory pinning.  
 
