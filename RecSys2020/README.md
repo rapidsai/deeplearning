@@ -26,15 +26,11 @@ These preprocessing steps are run only once on the original dataset. The preproc
 
 ### Benchmark
 
-*03_ModelsBenchmark* contains the highly optimized CPU and GPU code of the common techniques used XGBoost1, XGBoost2 and XGBoost3.
+*03_ModelsBenchmark* contains the highly optimized CPU and GPU code of the common techniques used for XGBoost1, XGBoost2 and XGBoost3. The GPU accelerated version shows a speed-up of 25x compared to optimized dask+pandas and a speed-up of 250x compared to pure pandas version. The repository contains code 
+* optimized CPU (Intel Xeon CPU (20 cores))
+* optimized MultiGPU (4xV100) 
+* optimized MutliGPU (4xV100+UCX)
 
-|                 | Pandas | Intel Xeon CPU (20 cores) | 1xV100 | 4xV100 | 4xV100+UCX |
-|-----------------|--------|---------------------------|--------|--------|------------|
-| target encoding |  30120 |                      1785 |    302 |    108 |       46.4 |
-| count encoding  |    540 |                       485 |     50 |     18 |        7.5 |
-| lag features    |   1380 |                       121 |     62 |      7 |        3.3 |
-| train & predict |   6900 |                       844 |    180 |     56 |         56 |
-| other           |      0 |                       335 |    426 |     81 |       24.8 |
-| total           |  38940 |                      3570 |   1020 |    270 |        138 |
-
-
+<p align="center">
+  <img src="./src/Chart.jpg" width="50%" >
+</p>
