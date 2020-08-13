@@ -4,8 +4,8 @@ This repository contains the code of the winning solution of the RecSys2020 Chal
 
 ## Prerequisites
 * Collect the data at the following location: https://recsys-twitter.com/data/show-downloads (you need to sign up to get access)
-* RAPIDS cuDF
-** For *02_ModelsCompetition* use cuDF 0.13
+* RAPIDS cuDF<br>
+** For *02_ModelsCompetition* use cuDF 0.13<br>
 ** For *01_Preprocess* and *03_ModelsBenchmark* use cuDF 0.14
 * 1-4x GPU 32GB Tesla V100)
 
