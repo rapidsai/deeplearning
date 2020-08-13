@@ -7,7 +7,7 @@ This repository contains the code of the winning solution of the RecSys2020 Chal
 * RAPIDS cuDF<br>
 ** For *02_ModelsCompetition* use cuDF 0.13<br>
 ** For *01_Preprocess* and *03_ModelsBenchmark* use cuDF 0.14
-* 1-4x GPU 32GB Tesla V100)
+* 1-4x GPU 32GB Tesla V100
 
 ## Structure
 
